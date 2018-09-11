@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gs.glink.common:glink-common:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gs.glink.common/glink-common/1.0.0-SNAPSHOT/3bb45f2285cf44890b3ea98a3d15bcde4317265d/glink-common-1.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gs.glink.common/glink-common/1.0.0-SNAPSHOT/6c909baeed3068f20903559f82bb91d607a611a/glink-common-1.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

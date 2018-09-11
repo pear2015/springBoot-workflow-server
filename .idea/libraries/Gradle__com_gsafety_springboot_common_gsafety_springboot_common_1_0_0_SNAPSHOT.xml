@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gsafety.springboot.common:gsafety-springboot-common:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gsafety.springboot.common/gsafety-springboot-common/1.0.0-SNAPSHOT/5227b7ad233393918f4131d2c2d61907454a6387/gsafety-springboot-common-1.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gsafety.springboot.common/gsafety-springboot-common/1.0.0-SNAPSHOT/a666cffda825e80ee0ec67cf85623bb664e10a7/gsafety-springboot-common-1.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend.iml" group="workflow-backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend_main.iml" group="workflow-backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-backend/workflow-backend_test.iml" group="workflow-backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common.iml" group="workflow-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common_main.iml" group="workflow-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-common/workflow-common_test.iml" group="workflow-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract.iml" group="workflow-contract" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract_main.iml" group="workflow-contract" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-contract/workflow-contract_test.iml" group="workflow-contract" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-server.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-server_main.iml" group="workflow-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-server_test.iml" group="workflow-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service.iml" group="workflow-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service_main.iml" group="workflow-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-service/workflow-service_test.iml" group="workflow-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi.iml" group="workflow-webapi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi_main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi_main.iml" group="workflow-webapi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi_test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflow-webapi/workflow-webapi_test.iml" group="workflow-webapi" />
+    </modules>
+  </component>
+</project>

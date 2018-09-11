@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="workflow-backend_main" target="1.8" />
+      <module name="workflow-backend_test" target="1.8" />
+      <module name="workflow-common_main" target="1.8" />
+      <module name="workflow-common_test" target="1.8" />
+      <module name="workflow-contract_main" target="1.8" />
+      <module name="workflow-contract_test" target="1.8" />
+      <module name="workflow-server_main" target="1.8" />
+      <module name="workflow-server_test" target="1.8" />
+      <module name="workflow-service_main" target="1.8" />
+      <module name="workflow-service_test" target="1.8" />
+      <module name="workflow-webapi_main" target="1.8" />
+      <module name="workflow-webapi_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
