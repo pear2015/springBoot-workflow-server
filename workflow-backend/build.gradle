@@ -1,0 +1,26 @@
+group 'com.gs.workflow'
+
+archivesBaseName = 'workflow-backend'
+
+
+configurations {
+    //每次build时检查更新
+    all { resolutionStrategy.cacheChangingModulesFor(0, "seconds") }
+}
+
+dependencies{
+    // 依赖模块
+    compile project(":workflow-common")
+    compile project(":workflow-webapi")
+    compile project(":workflow-service")
+
+    //系统提供的依赖
+   /* providedCompile(
+            "javax.servlet:javax.servlet-api:3.1.0",
+            "javax.servlet.jsp:jsp-api:2.2.1-b03",
+            "javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1"
+    )*/
+}
+apply from: "../scripts/gradle/publish.gradle"
+apply from: "../scripts/gradle/warbuild.gradle"
+

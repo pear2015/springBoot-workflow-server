@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: workflow-backend
+Implementation-Version: 1.4.0-SNAPSHOT
+Built-By: PEAR
+Build-Time: 2018-01-18 19:10:04
+Tool: Gradle 3.2.1
+Created-By: 1.8.0_131 (Oracle Corporation 25.131-b11)
+Implementation-Vendor: Gsafety
+

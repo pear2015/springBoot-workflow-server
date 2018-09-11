@@ -1,0 +1,14 @@
+group 'com.gs.workflow'
+archivesBaseName = 'workflow-contract'
+
+apply from: "../scripts/gradle/publish.gradle"
+
+dependencies {
+    // 依赖模块
+    //compile 'com.gsafety.ecms.analysisgauge.access:ecms-analysisgauge-access-common:1.0.0-SNAPSHOT'
+    compile project(":workflow-common")
+}
+//    compile project(":ecms-analysisgauge-access-common")
+//bootRepackage{
+//    enabled = false
+//}

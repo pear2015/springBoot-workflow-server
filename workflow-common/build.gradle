@@ -1,0 +1,12 @@
+group 'com.gs.workflow'
+
+archivesBaseName = 'workflow-common'
+
+apply from: "../scripts/gradle/publish.gradle"
+
+dependencies{
+    // 依赖模块
+}
+//bootRepackage{
+//    enabled = false
+//}

@@ -1,0 +1,106 @@
+apply plugin: "java"
+apply plugin: "maven"
+apply plugin: 'org.sonarqube'
+apply plugin: 'jacoco'
+
+
+ext {
+    //jacoco分析指标
+    limits = [
+            //'instruction': 80,
+            'branch'     : 80,
+            'line'       : 80,
+            //'complexity' : 80,
+            'method'     : 80,
+            'class'      : 80
+    ]
+}
+
+
+// sonar.analysis.mode的值有:
+//     publish 将报告发布到服务器
+//     preview 报告在本地生成
+//     issues  ？
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://172.18.24.25:9000/'
+        property 'sonar.login', 'devappuser'
+        property 'sonar.password', 'devapp'
+        property 'sonar.sourceEncoding', 'UTF-8'
+        property 'sonar.scm.provider', 'git'
+        property 'sonar.exclusions','**/model/**'
+        property 'sonar.exclusions','**/entity/**'
+        property 'sonar.analysis.mode', 'publish'
+    }
+}
+
+// 启用html报告
+jacocoTestReport {
+    reports {
+       /* xml.enabled false
+        csv.enabled false
+        html.enabled true*/
+        xml.enabled true
+    }
+
+    /*afterEvaluate{
+        classDirectories=files(classDirectories.files.collect{
+            fileTree(dir:it,exclude:['**//*IncidentApportionFactory**',
+                                     '**//*IncidentApportionSourceThread**',
+                                     '**//*IncidentApportionThread**'])
+        })
+    }*/
+
+    doLast {
+        def report = file("${jacoco.reportsDir}/test/jacocoTestReport.xml")
+        logger.lifecycle("Checking coverage results: ${report}")
+
+        def parser = new XmlParser()
+        parser.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+        parser.setFeature("http://apache.org/xml/features/disallow-doctype-decl", false)
+        def results = parser.parse(report)
+
+        def percentage = {
+            def covered = it.'@covered' as Double
+            def missed = it.'@missed' as Double
+            ((covered / (covered + missed)) * 100).round(2)
+        }
+
+        def counters = results.counter
+        def metrics = [:]
+        metrics << [
+                'instruction': percentage(counters.find { it.'@type'.equals('INSTRUCTION') }),
+                'branch'     : percentage(counters.find { it.'@type'.equals('BRANCH') }),
+                'line'       : percentage(counters.find { it.'@type'.equals('LINE') }),
+                'complexity' : percentage(counters.find { it.'@type'.equals('COMPLEXITY') }),
+                'method'     : percentage(counters.find { it.'@type'.equals('METHOD') }),
+                'class'      : percentage(counters.find { it.'@type'.equals('CLASS') })
+        ]
+
+
+        def failures = []
+        metrics.each {
+            def limit = limits[it.key]
+            if (it.value < limit) {
+
+                failures.add("- ${it.key} coverage rate is: ${it.value}%, minimum is ${limit}%")
+            }
+        }
+
+        if (failures) {
+            logger.quiet("------------------ Code Coverage Failed -----------------------")
+            failures.each {
+                logger.quiet(it)
+            }
+            logger.quiet("---------------------------------------------------------------")
+            throw new GradleException("Code coverage failed")
+        } else{
+            logger.quiet("Passed Code Coverage Checks")
+        }
+    }
+}
+
+// 让jacocoTestReport任务，依赖test任务。
+// 在执行代码覆盖率时先执行单元测试。
+//
+jacocoTestReport.dependsOn("test")
